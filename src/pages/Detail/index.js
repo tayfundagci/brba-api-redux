@@ -9,7 +9,7 @@ function Detail() {
   const { char_id } = useParams();
 
   useEffect(() => {
-    axios(`${process.env.REACT_APP_API_BASE_ENDPOINT}/characters/${char_id}`)
+    axios(`https://www.breakingbadapi.com/api/characters/${char_id}`)
       .then((res) => res.data)
       .then((data) => setChar(data[0]))
       .finally(() => setLoading(false));

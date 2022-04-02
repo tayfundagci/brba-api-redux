@@ -7,9 +7,9 @@ export const fetchCharacters = createAsyncThunk(
   "characters/getCharacters",
   async (page) => {
     const res = await axios(
-      `${
-        process.env.REACT_APP_API_BASE_ENDPOINT
-      }/characters?limit=${char_limit}&offset=${page * char_limit}`
+      `https://www.breakingbadapi.com/api/characters?limit=${char_limit}&offset=${
+        page * char_limit
+      }`
     );
     return res.data;
   }
